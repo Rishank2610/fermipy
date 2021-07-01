@@ -1,0 +1,32 @@
+data:
+  evfile : /home/rishank/test12/binned_events.lst
+  scfile : /home/rishank/test12/L2008010820357CC664E402_SC00.fits
+  ltcube : null
+
+binning:
+
+  roiwidth   : 10.0
+  binsz      : 0.1 
+  binsperdec : 8   
+
+selection:
+
+  emin    : 100
+  emax    : 300000
+  zmax    : 90
+  evclass : 128
+  evtype  : 3
+  target  : '1ES1218+304'
+
+gtlike:
+
+  edisp : True
+  irfs : 'P8R3_SOURCE_V2'
+  edisp_disable : ['isodiff','galdiff']
+
+model:
+
+  src_roiwidth : 15.0
+  galdiff  : '$FERMI_DIR/refdata/fermi/galdiffuse/gll_iem_v07.fits'
+  isodiff  : '$FERMI_DIR/refdata/fermi/galdiffuse/iso_P8R3_SOURCE_V2_v1.txt'
+  catalogs : ['gll_psc_v22.fit']
